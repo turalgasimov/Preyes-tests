@@ -12,7 +12,7 @@ def extract_price_from_image(image_path: str):
             messages=[
                 {
                     "role": "user",
-                    "content": "Give me only product price in price tag, in X.XX format.",
+                    "content": "Extract price in X.XX format only.",
                     "images": [image_path]
                 }
             ]
