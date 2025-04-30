@@ -19,3 +19,7 @@ async def get_price():
 async def get_audio():
     audio_stream = sdp_app.generate_audio()
     return StreamingResponse(audio_stream, media_type="audio/wav")
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="10.0.146.237", port=8000)

@@ -2,7 +2,7 @@
 import os
 import shutil
 import subprocess
-from llama_util import extract_price_from_image
+from inference import extract_price_from_image  # Updated import
 
 class SDPAPP:
     def __init__(self):
@@ -21,7 +21,7 @@ class SDPAPP:
             if isinstance(result, list) and result:
                 self.extracted_prices = result
             else:
-                self.extracted_prices = ["0.00"]  # fallback or signal
+                self.extracted_prices = ["0.00"]
 
         except Exception:
             self.extracted_prices = ["0.00"]
